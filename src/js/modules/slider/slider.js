@@ -17,7 +17,5 @@ export default class Slider {
         this.autoplay = autoplay;
         this.slideIndex = 1;
     }
-
-    
 }
 

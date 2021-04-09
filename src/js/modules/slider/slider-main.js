@@ -48,11 +48,6 @@ export default class MainSlider extends Slider {
         this.btns.forEach(btn => {
             btn.addEventListener('click', () => {
                 this.plusSlides(1);
-                // if (this.slideIndex == 3) {
-                //     showBlock('.hanson', 3000);
-                // } else {
-                //     hideBlock('.hanson');
-                // }
             });
             btn.parentNode.previousElementSibling.addEventListener('click', (e) => {
                 e.preventDefault();

@@ -3009,12 +3009,7 @@ function (_Slider) {
 
       this.btns.forEach(function (btn) {
         btn.addEventListener('click', function () {
-          _this2.plusSlides(1); // if (this.slideIndex == 3) {
-          //     showBlock('.hanson', 3000);
-          // } else {
-          //     hideBlock('.hanson');
-          // }
-
+          _this2.plusSlides(1);
         });
         btn.parentNode.previousElementSibling.addEventListener('click', function (e) {
           e.preventDefault();
