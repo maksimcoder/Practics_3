@@ -21,7 +21,8 @@ window.addEventListener('DOMContentLoaded', () => {
         prev: '.modules__info-btns .slick-prev',
         next: '.modules__info-btns .slick-next',
         activeClass: 'card-active',
-        animate: true
+        animate: true,
+        autoplay: true
     });
     modulesSlider.init();
 
