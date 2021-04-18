@@ -58,25 +58,27 @@ export default class MiniSlider extends Slider {
     }
 
     init() {
-        this.container.style.cssText = `
-            display: flex;
-            flex-wrap: wrap;
-            overflow: hidden;
-            align-items: flex-start;
-        `;
-        this.bindTriggers();
-        this.decorizeSlides();
-        if (this.autoplay) {
-            let slidesInterval = setInterval(() => this.nextSlide(), 5000);
-            console.log(slidesInterval);
-            this.container.addEventListener('mouseenter', () => {
-                clearInterval(slidesInterval);
+        try {
+            this.container.style.cssText = `
+                display: flex;
+                flex-wrap: wrap;
+                overflow: hidden;
+                align-items: flex-start;
+            `;
+            this.bindTriggers();
+            this.decorizeSlides();
+            if (this.autoplay) {
+                let slidesInterval = setInterval(() => this.nextSlide(), 5000);
                 console.log(slidesInterval);
-            }); 
-            this.container.addEventListener('mouseleave', () => {
-                slidesInterval = setInterval(() => this.nextSlide(), 5000);
-                console.log(slidesInterval);
-            });
-        }
+                this.container.addEventListener('mouseenter', () => {
+                    clearInterval(slidesInterval);
+                    console.log(slidesInterval);
+                }); 
+                this.container.addEventListener('mouseleave', () => {
+                    slidesInterval = setInterval(() => this.nextSlide(), 5000);
+                    console.log(slidesInterval);
+                });
+            }
+        } catch(e){}
     }
 }
